@@ -14,8 +14,8 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-TUXEDO_VERSION="$1"
-TUXEDO_SRC_URL="https://raw.githubusercontent.com/tuxedocomputers/tuxedo-control-center/v${TUXEDO_VERSION}"
+COMMIT="$1"
+TUXEDO_SRC_URL="https://raw.githubusercontent.com/akshaymankar/tuxedo-control-center/${COMMIT}"
 
 WORKDIR=$(mktemp -d)
 trap 'rm -r "$WORKDIR"' EXIT

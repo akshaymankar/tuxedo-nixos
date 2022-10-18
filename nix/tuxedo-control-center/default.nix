@@ -10,7 +10,7 @@ let
   #    a parameter. For example: `./update.sh 1.1.1`
   # 2. Bump the version attribute and src SHA-256 here.
   # 3. Build and test.
-  version = "1.1.3";
+  version = "1.2.1";
 
   baseNodePackages = (import ./node-composition.nix {
     inherit pkgs nodejs;
@@ -19,10 +19,10 @@ let
 
   nodePackages = baseNodePackages.package.override {
     src = fetchFromGitHub {
-      owner = "tuxedocomputers";
+      owner = "akshaymankar";
       repo = "tuxedo-control-center";
-      rev = "v${version}";
-      sha256 = "etFacSM152DkFWKSdCI3kXCwSwvRXFxZFmUx85JJdGk=";
+      rev = "adfbc3d8746af2f9dcca1ba04e2627f4a449fbd3";
+      sha256 = "sha256-KmczhmZVDsW7H+ybMCRZYwixxELBWWliBfdFg/E76L8=";
     };
 
     buildInputs = [
